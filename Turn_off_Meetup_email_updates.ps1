@@ -100,8 +100,6 @@ $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_CSRF", "58a0d4db-58dc
 $session.Cookies.Add((New-Object System.Net.Cookie("__stripe_sid", "ef34f968-eb97-475e-98fb-a1128cc6bc19800a74", "/", ".www.meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_MEMBER_LOCATION", "lat=51.48&lon=-0.27&city=London&state=17&country=gb&timeZone=Europe%252FLondon", "/", "www.meetup.com")))
 
-# TODO: rate limit requests
-
 foreach ($group in $groupIdsMap.GetEnumerator())
 {
   $groupId = $group.Key
@@ -142,5 +140,7 @@ foreach ($group in $groupIdsMap.GetEnumerator())
     } `
     -ContentType "application/json" `
     -Body $body
+
+    Start-Sleep -Seconds 3
   }
 }
