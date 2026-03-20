@@ -1,3 +1,7 @@
+# Troubleshooting:
+# If you get response {"errors":[{"message":"PersistedQueryNotFound","locations":[],"extensions":{"persistedQueryId":"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858","generatedBy":"graphql-java","classification":"PersistedQueryNotFound"}}]}
+# try again.
+
 $rateLimitDelaySeconds = 3
 
 $groupIdsMap = @{
@@ -53,7 +57,9 @@ $groupIdsMap = @{
   # "2600652" = "thirsties"
 }
 
-# Note, the values for on can be "ON", "RECEIVE" or "ROLLUP"; the values for off can be "OFF" or "NO_RECEIVE".
+# Note:
+# - the values for "on" can be "ON", "RECEIVE" or (exceptionally) "ROLLUP"
+# - the values for "off" can be "OFF" or "NO_RECEIVE".
 # Do not understand the pattern here.
 $updateTypes = @{
   # commented out types that are only applicable to organisers
