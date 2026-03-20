@@ -113,6 +113,8 @@ $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_MEMBER_LOCATION", "la
 
 Write-Output "Starting to update preferences for $($groupIdsMap.Count) groups and $($updateTypes.Count) update types (with rate limiting of 1 request every $rateLimitDelaySeconds seconds)."
 
+$sw = [Diagnostics.Stopwatch]::StartNew()
+
 foreach ($group in $groupIdsMap.GetEnumerator())
 {
   $groupId = $group.Key
@@ -169,5 +171,9 @@ foreach ($group in $groupIdsMap.GetEnumerator())
     Start-Sleep -Seconds $rateLimitDelaySeconds
   }
 }
+
+$sw.Stop()
+$time = $sw.Elapsed
+Write-Output "Time to execute all requests: $time"
 
 Write-Output "Finished updating preferences for all groups and update types."
