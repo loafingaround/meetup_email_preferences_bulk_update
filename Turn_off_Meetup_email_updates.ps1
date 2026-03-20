@@ -2,6 +2,8 @@
 # If you get response {"errors":[{"message":"PersistedQueryNotFound","locations":[],"extensions":{"persistedQueryId":"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858","generatedBy":"graphql-java","classification":"PersistedQueryNotFound"}}]}
 # try again.
 
+Start-Transcript -Path "logs.log"
+
 $rateLimitDelaySeconds = 3
 
 $groupIdsMap = @{
@@ -177,3 +179,5 @@ $time = $sw.Elapsed
 Write-Output "Time to execute all requests: $time"
 
 Write-Output "Finished updating preferences for all groups and update types."
+
+Stop-Transcript
