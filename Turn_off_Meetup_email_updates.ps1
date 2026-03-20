@@ -6,7 +6,7 @@ Start-Transcript -Path "logs.log"
 
 $rateLimitDelaySeconds = 3
 
-$groupIdsMap = @{
+$groupIdsMap = [ordered] @{
   # "19985376" = "Elite-Parties-London"
   # "31600778" = "netinlondon"
   # "543596" = "london-dot-net"
@@ -63,7 +63,7 @@ $groupIdsMap = @{
 # - the values for "on" can be "ON", "RECEIVE" or (exceptionally) "ROLLUP"
 # - the values for "off" can be "OFF" or "NO_RECEIVE".
 # Do not understand the pattern here.
-$updateTypes = @{
+$updateTypes = [ordered] @{
   # commented out types that are only applicable to organisers
   #"new_member_email" = "NO_RECEIVE"
   #"dues_notify" = "NO_RECEIVE"
