@@ -93,12 +93,17 @@ $session.Cookies.Add((New-Object System.Net.Cookie("RoktRecogniser", "9fd13925-5
 $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_BROWSER_ID", "id=c05a07ad-ef5e-4ae4-af0e-125437f33f4b", "/", ".meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("step-up-dismissed-banners", "[%2232869457%22]", "/", "www.meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("USER_CHANGED_DISTANCE_FILTER", "false", "/", "www.meetup.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.sessionId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%2221e3e2fd-6ed6-a852-0cd4-fb802da7eb1f%22%2C%22e%22%3A1773702062414%2C%22c%22%3A1773700262415%2C%22l%22%3A1773700262415%7D", "/", ".meetup.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.deviceId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%2247751f8c-d1e5-4628-d51d-aa87d034bfa9%22%2C%22c%22%3A1702140147254%2C%22l%22%3A1773700262417%7D", "/", ".meetup.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.userId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%22173932732%22%2C%22c%22%3A1702140147267%2C%22l%22%3A1773700262417%7D", "/", ".meetup.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_CSRF", "58a0d4db-58dc-4a83-9fe2-9e50a372eb51", "/", ".meetup.com")))
-$session.Cookies.Add((New-Object System.Net.Cookie("__stripe_sid", "ef34f968-eb97-475e-98fb-a1128cc6bc19800a74", "/", ".www.meetup.com")))
+$gStateCookieValue = "{`"i_l`":0,`"i_ll`":1774020283479,`"i_b`":`"/QP2UjoM20MkKUNuWplFGWtos4QzDDsLefEFAVignZE`",`"i_e`":{`"enable_itp_optimization`":0}}"
+$encodedGState = [System.Net.WebUtility]::UrlEncode($gStateCookieValue)
+$session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_CSRF", "f68c940e-5c4b-4b7d-9b93-d4d3c71210fa", "/", ".meetup.com")))
+$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.sessionId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%2292d23cca-42a6-0b16-2dbf-921396b89418%22%2C%22e%22%3A1774022994450%2C%22c%22%3A1774021194452%2C%22l%22%3A1774021194452%7D", "/", ".meetup.com")))
+$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.deviceId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%2247751f8c-d1e5-4628-d51d-aa87d034bfa9%22%2C%22c%22%3A1702140147254%2C%22l%22%3A1774021194454%7D", "/", ".meetup.com")))
+$session.Cookies.Add((New-Object System.Net.Cookie("ab.storage.userId.4e505175-14eb-44b5-b07f-b0edb6050714", "%7B%22g%22%3A%22173932732%22%2C%22c%22%3A1702140147267%2C%22l%22%3A1774021194454%7D", "/", ".meetup.com")))
+$session.Cookies.Add((New-Object System.Net.Cookie("__Host-NEXT_MEETUP_CSRF", "ea031959-1d6c-43a4-bb31-c9c1f3cad6ca", "/", "www.meetup.com")))
+$session.Cookies.Add((New-Object System.Net.Cookie("__stripe_sid", "6e7fd5ab-354c-49e8-b142-0f771836759fb74ef5", "/", ".www.meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_MEMBER_LOCATION", "lat=51.48&lon=-0.27&city=London&state=17&country=gb&timeZone=Europe%252FLondon", "/", "www.meetup.com")))
+
+Write-Output "Starting to update preferences for $($groupIdsMap.Count) groups and $($updateTypes.Count) update types..."
 
 foreach ($group in $groupIdsMap.GetEnumerator())
 {
@@ -112,7 +117,9 @@ foreach ($group in $groupIdsMap.GetEnumerator())
 
     $body = "{`"operationName`":`"updateMembershipPreferences`",`"variables`":{`"groupId`":`"$groupId`",`"preferences`":[{`"name`":`"$updateTypeId`",`"value`":`"$updateTypeValue`"}]},`"extensions`":{`"persistedQuery`":{`"version`":1,`"sha256Hash`":`"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858`"}}}"
 
-    Invoke-WebRequest -UseBasicParsing -Uri "https://www.meetup.com/gql2" `
+    Write-Output "Updating $updateTypeId preference for $groupName to $updateTypeValue..."
+
+    $response = Invoke-WebRequest -UseBasicParsing -Uri "https://www.meetup.com/gql2" `
     -Method "POST" `
     -WebSession $session `
     -Headers @{
@@ -141,6 +148,16 @@ foreach ($group in $groupIdsMap.GetEnumerator())
     -ContentType "application/json" `
     -Body $body
 
+    $expectedResponse = '{"data":{"updateMembershipPreferences":{"errors":null,"__typename":"UpdateMembershipPreferencesPayload"}}}'
+
+    if ($response.StatusCode -eq 200 -and $response.Content -eq $expectedResponse) {
+      Write-Host "Done" -ForegroundColor Green
+    } else {
+      Write-Host "Failed - HTTP Status: $($response.StatusCode), Response: $($response.Content)" -ForegroundColor Red
+    }
+
     Start-Sleep -Seconds 3
   }
 }
+
+Write-Output "Finished updating preferences for all groups and update types."
