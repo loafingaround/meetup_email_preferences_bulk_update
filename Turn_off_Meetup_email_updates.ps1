@@ -1,3 +1,5 @@
+$rateLimitDelaySeconds = 3
+
 $groupIdsMap = @{
   "19985376" = "Elite-Parties-London"
   "31600778" = "netinlondon"
@@ -103,12 +105,14 @@ $session.Cookies.Add((New-Object System.Net.Cookie("__Host-NEXT_MEETUP_CSRF", "e
 $session.Cookies.Add((New-Object System.Net.Cookie("__stripe_sid", "6e7fd5ab-354c-49e8-b142-0f771836759fb74ef5", "/", ".www.meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_MEMBER_LOCATION", "lat=51.48&lon=-0.27&city=London&state=17&country=gb&timeZone=Europe%252FLondon", "/", "www.meetup.com")))
 
-Write-Output "Starting to update preferences for $($groupIdsMap.Count) groups and $($updateTypes.Count) update types..."
+Write-Output "Starting to update preferences for $($groupIdsMap.Count) groups and $($updateTypes.Count) update types (with rate limiting of 1 request every $rateLimitDelaySeconds seconds)."
 
 foreach ($group in $groupIdsMap.GetEnumerator())
 {
   $groupId = $group.Key
   $groupName = $group.Value
+
+  Write-Output "Updating preferences for group: $groupName."
   
   foreach ($updateType in $updateTypes.GetEnumerator())
   {     
@@ -117,7 +121,7 @@ foreach ($group in $groupIdsMap.GetEnumerator())
 
     $body = "{`"operationName`":`"updateMembershipPreferences`",`"variables`":{`"groupId`":`"$groupId`",`"preferences`":[{`"name`":`"$updateTypeId`",`"value`":`"$updateTypeValue`"}]},`"extensions`":{`"persistedQuery`":{`"version`":1,`"sha256Hash`":`"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858`"}}}"
 
-    Write-Output "Updating $updateTypeId preference for $groupName to $updateTypeValue..."
+    Write-Output "`tUpdating $updateTypeId preference to $updateTypeValue..."
 
     $response = Invoke-WebRequest -UseBasicParsing -Uri "https://www.meetup.com/gql2" `
     -Method "POST" `
@@ -151,12 +155,12 @@ foreach ($group in $groupIdsMap.GetEnumerator())
     $expectedResponse = '{"data":{"updateMembershipPreferences":{"errors":null,"__typename":"UpdateMembershipPreferencesPayload"}}}'
 
     if ($response.StatusCode -eq 200 -and $response.Content -eq $expectedResponse) {
-      Write-Host "Done" -ForegroundColor Green
+      Write-Host "`tDone" -ForegroundColor Green
     } else {
-      Write-Host "Failed - HTTP Status: $($response.StatusCode), Response: $($response.Content)" -ForegroundColor Red
+      Write-Host "`tFailed - HTTP Status: $($response.StatusCode), Response: $($response.Content)" -ForegroundColor Red
     }
 
-    Start-Sleep -Seconds 3
+    Start-Sleep -Seconds $rateLimitDelaySeconds
   }
 }
 
