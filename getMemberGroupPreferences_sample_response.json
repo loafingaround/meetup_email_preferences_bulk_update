@@ -1,0 +1,104 @@
+{
+    "data": {
+        "groupByUrlname": {
+            "id": "19985376",
+            "name": "!ELITE PARTIES LONDON!",
+            "urlname": "Elite-Parties-London",
+            "isMember": true,
+            "joinMode": "OPEN",
+            "proNetwork": null,
+            "membershipMetadata": {
+                "role": "MEMBER",
+                "preferences": [
+                    {
+                        "name": "new_member_email",
+                        "value": "RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "dues_notify",
+                        "value": "RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "member_leave",
+                        "value": "NO_RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "event_announce",
+                        "value": "NO_RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "rsvp_confirm",
+                        "value": "OFF",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "rsvp_alert",
+                        "value": "ON",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "event_update",
+                        "value": "ON",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "event_comments",
+                        "value": "OFF",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "event_reminder",
+                        "value": "NO_RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "post_event_rating",
+                        "value": "OFF",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "org_event_broadcast",
+                        "value": "NO_RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "photo_upload",
+                        "value": "ON",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "photo_comment",
+                        "value": "ON",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "org_broadcast",
+                        "value": "NO_RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "venue_change",
+                        "value": "RECEIVE",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "conversation_announce",
+                        "value": "OFF",
+                        "__typename": "Preference"
+                    },
+                    {
+                        "name": "pending_member",
+                        "value": "ON",
+                        "__typename": "Preference"
+                    }
+                ],
+                "__typename": "Membership"
+            },
+            "__typename": "Group"
+        }
+    }
+}

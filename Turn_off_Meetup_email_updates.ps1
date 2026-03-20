@@ -1,10 +1,78 @@
 $groupIdsMap = @{
+  "Elite-Parties-London" = "19985376"
+  "netinlondon" = "31600778"
+  "london-dot-net" = "543596"
+  "london-elite-social" = "1730379"
+  "meetup-group-yfjszxns" = "36730251"
+  "aiseceng-london" = "18972375"
+  "Backabush" = "545136"
+  "balancers" = "36551111"
+  "cambridge-hiking-club" = "36926044"
+  "cambridgepopupgroup" = "37201468"
+  "wavehoover" = "36299590"
+  "chaos_cooking_cambridge" = "13086952"
   "cityzenlondon" = "33943810"
+  "findcltv" = "34083538"
+  "data-and-ai-leaders-uk" = "37916674"
+  "debait-build-confidence-to-speak-your-mind" = "38104362"
+  "chill-coding-developer-meetup-group" = "37272918"
+  "FSharpLondon" = "1594214"
+  "generative-ai-uk-community" = "37529789"
+  "passionate-about-travelling-food-and-events" = "27806016"
+  "UK-Hackathons-and-Jams" = "3554552"
+  "its-a-date-singles-events" = "37470994"
+  "Jordan-Peterson-Fans" = "28434929"
+  "london-net-user-group" = "3889502"
+  "londonlondonlondon" = "37194033"
+  "london-singles-looking-to-connect-in-real-life" = "37755343"
+  "london-singles-parties-meetup-group" = "33018092"
+  "LondonSocialRunners" = "1546308"
+  "london-society-of-explorers" = "38157273"
+  "London-Theater-Meetup-Group" = "32869457"
+  "mariannas-events-london-nightlife-social-20s-30s-40s" = "21075569"
+  "microsoft-reactor-london" = "32685397"
+  "north-london-house-concerts" = "30384063"
+  "nurnberg-aws-user-group" = "18711362"
+  "openclaw-london" = "38399048"
+  "outdooraholics" = "1754359"
+  "Putney-Social-group" = "3204512"
+  "silicon-drinkabout-cambridge" = "27162885"
+  "siliconroundabout" = "1761047"
+  "single-and-social-london-over-35" = "25339261"
+  "single-and-social-london-over-30" = "20233245"
+  "london-singles-club" = "1684484"
+  "men-who-are-bored-of-dating-apps" = "37006846"
+  "Londonandsingle" = "3851882"
+  "software-architecture-or-system-design-training" = "38084295"
+  "on-net" = "37510289"
+  "true-dating" = "33323197"
+  "london_cultureseekers" = "315983"
+  "the-techie-brunch-club" = "37526834"
+  "thirsties" = "2600652"
 }
 
-$updateTypes = @(
-  "org_event_broadcast" # Event updates from organizers
-)
+# Note, the values for on can be "ON", "RECEIVE" or "ROLLUP"; the values for off can be "OFF" or "NO_RECEIVE".
+# Do not understand the pattern here.
+$updateTypes = @{
+  # commented out types that are only applicable to organisers
+  #"new_member_email" = "NO_RECEIVE"
+  #"dues_notify" = "NO_RECEIVE"
+  #"member_leave" = "NO_RECEIVE"
+  "event_announce" = "NO_RECEIVE"  # New event announcements
+  "rsvp_confirm" = "NO_RECEIVE"  # My RSVP is confirmed
+  #"rsvp_alert" = "NO_RECEIVE"
+  "event_update" = "NO_RECEIVE"  # Changes to event time or location
+  "event_comments" = "NO_RECEIVE"  # New comments on events you’re attending or attended
+  "event_reminder" = "NO_RECEIVE"  # Event reminders
+  "post_event_rating" = "NO_RECEIVE"  # Event rating requests
+  "org_event_broadcast" = "NO_RECEIVE"  # Event updates from organizers
+  "photo_upload" = "NO_RECEIVE"  # New photos uploaded to event albums
+  "photo_comment" = "NO_RECEIVE"  # Someone tags or comments on my photo
+  "org_broadcast" = "NO_RECEIVE"  # Announcement to members about the group
+  #"venue_change" = "NO_RECEIVE"  # does not seem to be only applicable to organisers, but it appears not to be displayed on the page
+  "conversation_announce" = "NO_RECEIVE"  # Discussion invitations
+  #"pending_member" = "NO_RECEIVE"
+}
 
 # Replace this section when necessary with $session.Cookies.Add calls from copying request in browser again
 $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
@@ -32,10 +100,12 @@ $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_CSRF", "58a0d4db-58dc
 $session.Cookies.Add((New-Object System.Net.Cookie("__stripe_sid", "ef34f968-eb97-475e-98fb-a1128cc6bc19800a74", "/", ".www.meetup.com")))
 $session.Cookies.Add((New-Object System.Net.Cookie("MEETUP_MEMBER_LOCATION", "lat=51.48&lon=-0.27&city=London&state=17&country=gb&timeZone=Europe%252FLondon", "/", "www.meetup.com")))
 
+# TODO: rate limit requests
+
 foreach ($group in $groupIdsMap.GetEnumerator())
 {
-  $groupName = $group.Key
-  $groupId = $group.Value
+  $groupId = $group.Key
+  $groupName = $group.Value
   
   foreach ($updateType in $updateTypes)
   {     

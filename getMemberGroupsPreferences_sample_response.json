@@ -1,0 +1,865 @@
+{
+    "data": {
+        "self": {
+            "id": "173932732",
+            "isOrganizer": false,
+            "isProOrganizer": false,
+            "memberships": {
+                "pageInfo": {
+                    "hasNextPage": true,
+                    "endCursor": "NTA=",
+                    "__typename": "PageInfo"
+                },
+                "edges": [
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "19985376",
+                            "urlname": "Elite-Parties-London",
+                            "name": "!ELITE PARTIES LONDON!",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "31600778",
+                            "urlname": "netinlondon",
+                            "name": ".NET in London",
+                            "joinMode": "APPROVAL",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "543596",
+                            "urlname": "london-dot-net",
+                            "name": ".NET London Meetup",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "880313355791372288",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1730379",
+                            "urlname": "london-elite-social",
+                            "name": "\" ELITE SOCIAL \"",
+                            "joinMode": "APPROVAL",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "36730251",
+                            "urlname": "meetup-group-yfjszxns",
+                            "name": "(OLD) London Python Meetup Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "18972375",
+                            "urlname": "aiseceng-london",
+                            "name": "AI Security Engineers - London, UK",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1070620887739760640",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "545136",
+                            "urlname": "Backabush",
+                            "name": "BACKABUSH XPLORERS - Hiking & Outdoor Adventure Meetup Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1359883029188591616",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "36551111",
+                            "urlname": "balancers",
+                            "name": "Balancers - Expand Your Circle",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1148994124350107648",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "36926044",
+                            "urlname": "cambridge-hiking-club",
+                            "name": "Cambridge Hiking Club",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37201468",
+                            "urlname": "cambridgepopupgroup",
+                            "name": "Cambridge Pop Up Social Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "36299590",
+                            "urlname": "wavehoover",
+                            "name": "Career Coaching",
+                            "joinMode": "APPROVAL",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "13086952",
+                            "urlname": "chaos_cooking_cambridge",
+                            "name": "Chaos Cooking (Cambridge)",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "33943810",
+                            "urlname": "cityzenlondon",
+                            "name": "CityZen",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "34083538",
+                            "urlname": "findcltv",
+                            "name": "cltv | London Socials & Experiences",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37916674",
+                            "urlname": "data-and-ai-leaders-uk",
+                            "name": "Data and AI Leaders Community",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1346065860745056256",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "38104362",
+                            "urlname": "debait-build-confidence-to-speak-your-mind",
+                            "name": "Debait - respectful disagreement",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37272918",
+                            "urlname": "chill-coding-developer-meetup-group",
+                            "name": "East London - Hangout For Devs / Techies",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1594214",
+                            "urlname": "FSharpLondon",
+                            "name": "F# Londoners",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "474212212313018368",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37529789",
+                            "urlname": "generative-ai-uk-community",
+                            "name": "Generative AI UK Community",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1346065860745056256",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "27806016",
+                            "urlname": "passionate-about-travelling-food-and-events",
+                            "name": "GET A SOCIAL LIFE",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "3554552",
+                            "urlname": "UK-Hackathons-and-Jams",
+                            "name": "Hackathons and Jams UK",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37470994",
+                            "urlname": "its-a-date-singles-events",
+                            "name": "It's a Date Singles Events",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1335888900703059968",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "28434929",
+                            "urlname": "Jordan-Peterson-Fans",
+                            "name": "Jordan Peterson Fans",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "3889502",
+                            "urlname": "london-net-user-group",
+                            "name": "London .NET User Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "474212212313018368",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37194033",
+                            "urlname": "londonlondonlondon",
+                            "name": "London Events",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37755343",
+                            "urlname": "london-singles-looking-to-connect-in-real-life",
+                            "name": "London Singles Looking to Connect in Real Life",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "33018092",
+                            "urlname": "london-singles-parties-meetup-group",
+                            "name": "London Singles Parties Meetup Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1546308",
+                            "urlname": "LondonSocialRunners",
+                            "name": "London Social Runners",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "38157273",
+                            "urlname": "london-society-of-explorers",
+                            "name": "London Society of Explorers",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "32869457",
+                            "urlname": "London-Theater-Meetup-Group",
+                            "name": "London Theatre Meetup Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "21075569",
+                            "urlname": "mariannas-events-london-nightlife-social-20s-30s-40s",
+                            "name": "Marianna's Events : London Nightlife Social",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "32685397",
+                            "urlname": "microsoft-reactor-london",
+                            "name": "Microsoft Reactor London",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "755125066647490560",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "30384063",
+                            "urlname": "north-london-house-concerts",
+                            "name": "North London House Concerts",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "18711362",
+                            "urlname": "nurnberg-aws-user-group",
+                            "name": "Nürnberg AWS User Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1121475507299876864",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "38399048",
+                            "urlname": "openclaw-london",
+                            "name": "OpenClaw London",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1754359",
+                            "urlname": "outdooraholics",
+                            "name": "Outdooraholics London Hiking & Adventure Travel 25 to 49ish",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1138066163442077696",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "3204512",
+                            "urlname": "Putney-Social-group",
+                            "name": "Putney Social Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "27162885",
+                            "urlname": "silicon-drinkabout-cambridge",
+                            "name": "Silicon Drinkabout Cambridge",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1761047",
+                            "urlname": "siliconroundabout",
+                            "name": "Silicon Roundabout",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "25339261",
+                            "urlname": "single-and-social-london-over-35",
+                            "name": "Single-and-Social-London - Over 35 Singles Parties & Events.",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "20233245",
+                            "urlname": "single-and-social-london-over-30",
+                            "name": "Single-and-Social-London Over 30 Singles Parties & Events",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "1684484",
+                            "urlname": "london-singles-club",
+                            "name": "Singlely Ahead of the Curve",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37006846",
+                            "urlname": "men-who-are-bored-of-dating-apps",
+                            "name": "Singles events for single men in London",
+                            "joinMode": "APPROVAL",
+                            "proNetwork": {
+                                "id": "1391637342781374983",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "3851882",
+                            "urlname": "Londonandsingle",
+                            "name": "Singles Mingle London",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "38084295",
+                            "urlname": "software-architecture-or-system-design-training",
+                            "name": "Software Architecture or System Design  Training",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37510289",
+                            "urlname": "on-net",
+                            "name": "Source Talks: On .Net",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1158618611229999104",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "33323197",
+                            "urlname": "true-dating",
+                            "name": "Speed Dating & Singles Parties in London | True Dating",
+                            "joinMode": "OPEN",
+                            "proNetwork": {
+                                "id": "1242053607915409408",
+                                "__typename": "ProNetwork"
+                            },
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "315983",
+                            "urlname": "london_cultureseekers",
+                            "name": "The London Cultureseekers Group",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "37526834",
+                            "urlname": "the-techie-brunch-club",
+                            "name": "The Techie Brunch Club",
+                            "joinMode": "OPEN",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    },
+                    {
+                        "metadata": {
+                            "role": "MEMBER",
+                            "preferences": [],
+                            "__typename": "Membership"
+                        },
+                        "node": {
+                            "id": "2600652",
+                            "urlname": "thirsties",
+                            "name": "The Thirsty 40s & 50s (ish)",
+                            "joinMode": "APPROVAL",
+                            "proNetwork": null,
+                            "__typename": "Group"
+                        },
+                        "__typename": "MemberGroupEdge"
+                    }
+                ],
+                "__typename": "MemberGroupConnection"
+            },
+            "__typename": "Member"
+        }
+    }
+}
