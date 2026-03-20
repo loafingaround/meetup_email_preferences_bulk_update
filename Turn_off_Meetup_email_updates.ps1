@@ -107,9 +107,12 @@ foreach ($group in $groupIdsMap.GetEnumerator())
   $groupId = $group.Key
   $groupName = $group.Value
   
-  foreach ($updateType in $updateTypes)
+  foreach ($updateType in $updateTypes.GetEnumerator())
   {     
-    $body = "{`"operationName`":`"updateMembershipPreferences`",`"variables`":{`"groupId`":`"$groupId`",`"preferences`":[{`"name`":`"$updateType`",`"value`":`"NO_RECEIVE`"}]},`"extensions`":{`"persistedQuery`":{`"version`":1,`"sha256Hash`":`"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858`"}}}"
+    $updateTypeId = $updateType.Key
+    $updateTypeValue = $updateType.Value
+
+    $body = "{`"operationName`":`"updateMembershipPreferences`",`"variables`":{`"groupId`":`"$groupId`",`"preferences`":[{`"name`":`"$updateTypeId`",`"value`":`"$updateTypeValue`"}]},`"extensions`":{`"persistedQuery`":{`"version`":1,`"sha256Hash`":`"202b74346f864efb8eb0aefa4756671746e86e07f331580366f2eb4a0cd70858`"}}}"
 
     Invoke-WebRequest -UseBasicParsing -Uri "https://www.meetup.com/gql2" `
     -Method "POST" `
