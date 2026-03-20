@@ -59,18 +59,18 @@ $updateTypes = @{
   #"dues_notify" = "NO_RECEIVE"
   #"member_leave" = "NO_RECEIVE"
   "event_announce" = "NO_RECEIVE"  # New event announcements
-  "rsvp_confirm" = "NO_RECEIVE"  # My RSVP is confirmed
+  "rsvp_confirm" = "OFF"  # My RSVP is confirmed
   #"rsvp_alert" = "NO_RECEIVE"
-  "event_update" = "NO_RECEIVE"  # Changes to event time or location
-  "event_comments" = "NO_RECEIVE"  # New comments on events you’re attending or attended
+  "event_update" = "OFF"  # Changes to event time or location
+  "event_comments" = "OFF"  # New comments on events you’re attending or attended
   "event_reminder" = "NO_RECEIVE"  # Event reminders
-  "post_event_rating" = "NO_RECEIVE"  # Event rating requests
+  "post_event_rating" = "OFF"  # Event rating requests
   "org_event_broadcast" = "NO_RECEIVE"  # Event updates from organizers
-  "photo_upload" = "NO_RECEIVE"  # New photos uploaded to event albums
-  "photo_comment" = "NO_RECEIVE"  # Someone tags or comments on my photo
+  "photo_upload" = "OFF"  # New photos uploaded to event albums
+  "photo_comment" = "OFF"  # Someone tags or comments on my photo
   "org_broadcast" = "NO_RECEIVE"  # Announcement to members about the group
   #"venue_change" = "NO_RECEIVE"  # does not seem to be only applicable to organisers, but it appears not to be displayed on the page
-  "conversation_announce" = "NO_RECEIVE"  # Discussion invitations
+  "conversation_announce" = "OFF"  # Discussion invitations
   #"pending_member" = "NO_RECEIVE"
 }
 
